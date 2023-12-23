@@ -1,0 +1,5 @@
+"short_keyword_error_title" = "Keyword Too Short";
+"short_keyword_error_description" = "Please enter a keyword with at least 3 characters.";
+"alert_button_ok" = "OK";
+"api_error_title" = "An error occurred";
+"api_error_message" = "The request encountered an error. Please try again later.";

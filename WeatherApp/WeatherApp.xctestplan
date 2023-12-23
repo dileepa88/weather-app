@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "5BD71253-848F-4703-A545-D2E417227690",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:WeatherApp.xcodeproj",
+      "identifier" : "228526802B31DC25008DAD40",
+      "name" : "WeatherApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WeatherApp.xcodeproj",
+        "identifier" : "228526952B31DC2A008DAD40",
+        "name" : "WeatherAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WeatherApp.xcodeproj",
+        "identifier" : "2285269F2B31DC2A008DAD40",
+        "name" : "WeatherAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

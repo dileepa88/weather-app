@@ -1,0 +1,31 @@
+{
+    "search_api": {
+        "result": [
+            {
+                "areaName": [
+                    {
+                        "value": "Ang Mo Kio"
+                    }
+                ],
+                "country": [
+                    {
+                        "value": "Singapore"
+                    }
+                ],
+                "region": [
+                    {
+                        "value": ""
+                    }
+                ],
+                "latitude": "1.369",
+                "longitude": "103.850",
+                "population": "0",
+                "weatherUrl": [
+                    {
+                        "value": "https://www.worldweatheronline.com/v2/weather.aspx?q=1.3692,103.8497"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "request": [
+      {
+        "type": "City",
+        "query": "Ang Mo Kio, Singapore"
+      }
+    ],
+    "current_condition": [
+      {
+        "observation_time": "05:57 PM",
+        "temp_C": "26",
+        "temp_F": "79",
+        "weatherCode": "116",
+        "weatherIconUrl": [
+          {
+            "value": "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0004_black_low_cloud.png"
+          }
+        ],
+        "weatherDesc": [
+          {
+            "value": "Partly cloudy"
+          }
+        ],
+        "windspeedMiles": "2",
+        "windspeedKmph": "4",
+        "winddirDegree": "336",
+        "winddir16Point": "NNW",
+        "precipMM": "0.2",
+        "precipInches": "0.0",
+        "humidity": "94",
+        "visibility": "8",
+        "visibilityMiles": "4",
+        "pressure": "1012"
+      }
+    ]
+  }
+}
