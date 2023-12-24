@@ -4,7 +4,7 @@
 //
 //  Created by Dileepa Pathirana on 19/12/23.
 //
-/*
+
 import XCTest
 
 final class WeatherAppUITestsLaunchTests: XCTestCase {
@@ -30,4 +30,3 @@ final class WeatherAppUITestsLaunchTests: XCTestCase {
         add(attachment)
     }
 }
-*/

@@ -20,10 +20,12 @@ struct WeatherDetailView: View {
     
     var body: some View {
         
-        VStack(spacing: 20) {
+        VStack(spacing: 35) {
             
             Text("\(viewModel.currentCity.name), \(viewModel.currentCity.country)")
-                .font(.system(size: 20, weight: .bold, design: .serif))
+                .font(.system(size: 24, weight: .bold, design: .serif))
+                .multilineTextAlignment(.center)
+                .accessibilityIdentifier("City_Name")            
             
             AsyncImage(url: URL.init(string: viewModel.weatherDetail?.weatherIconUrl ?? "")) { image in
                 image
@@ -37,17 +39,22 @@ struct WeatherDetailView: View {
             
             VStack(spacing: 5) {
                 Text(viewModel.weatherDetail?.weatherDesc ?? "")
-                    .font(.system(size: 16, weight: .bold, design: .monospaced))
+                    .font(.system(size: 20, weight: .bold, design: .monospaced))
+                    .accessibilityIdentifier("City_Weather_info")
                 
                 Text("Temperature: " + (viewModel.weatherDetail?.tempC ?? "") + "C")
-                    .font(.system(size: 14))
+                    .font(.system(size: 16))
+                    .accessibilityIdentifier("City_Temp")
                 
                 Text("Humidity: " + (viewModel.weatherDetail?.humidity ?? ""))
-                    .font(.system(size: 14))
+                    .font(.system(size: 16))
+                    .accessibilityIdentifier("City_Humidity")
             }
             
             Spacer()
         }
+        .padding()
+        .navigationTitle("Weather info")
         .task {
             await getDetails()
         }
