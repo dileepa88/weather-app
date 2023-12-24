@@ -15,7 +15,42 @@ struct HomeView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
+            
+            List(viewModel.cityList, id: \.self) { item in
+                NavigationLink(value: item) {
+                    Text("\(item.name), \(item.country)").accessibilityLabel("\(item.name)_\(item.country)")
+                }
+            }
+            .navigationDestination(for: CityModel.self, destination: { item in
+                WeatherDetailView(city: item)
+            })
+            .onAppear {
+                if viewModel.shouldShowPastList {
+                    self.viewModel.generatePastList()
+                }
+            }.navigationTitle("Weather App")
+
+        }
+        .searchable(text: $viewModel.searchText)
+        .accessibilityLabel("YourSearchBarAccessibilityIdentifier")
+        .disableAutocorrection(true)
+        .onChange(of: viewModel.searchText) { value in
+            self.searchAsTyping()
+        }
+        .onSubmit(of: .search) {
+            self.search()
+        }.alert(isPresented: $viewModel.shouldShowError) {
+            Alert(
+                title: Text(viewModel.errorTitle),
+                message: Text(viewModel.errorMessage),
+                dismissButton: .default(Text(AppCopy.getString(CopyStrings.alert_button_ok))) {
+                    viewModel.showAlert = false
+                }
+            )
+        }
+
+        /*NavigationView {
 
             NavigationStack {
                 
@@ -49,7 +84,7 @@ struct HomeView: View {
                     }
                 )
             }
-        }
+        }*/
     }
     
     private func search() {
